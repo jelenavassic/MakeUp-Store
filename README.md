@@ -1,6 +1,6 @@
 # MakeUp-Store
 
-[Access the MyBudget App Online](https://jelenavassic.github.io/MakeUp-Store/)
+[Access the MakeUp Store Online](https://jelenavassic.github.io/MakeUp-Store/)
 
 
 This web application is a makeup product catalog and shopping tool that allows users to browse and purchase makeup products. Users can view a list of products, add them to their cart, and mark their favorite items. The app also provides filtering options based on brand and product type to help users find specific items.
