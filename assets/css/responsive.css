@@ -1,0 +1,210 @@
+/* /// Large devices (laptops/desktops, 992px and up)//////////////// */
+@media only screen and (max-width: 1200px) {
+  #header h1 {
+    font-size: 4rem;
+  }
+  #header h2 {
+    font-size: 2.5rem;
+  }
+  #showFilters {
+    font-size: 3rem;
+  }
+
+  .product {
+    width: 20%;
+    height: 60%;
+  }
+  #name {
+    font-size: 1rem;
+  }
+  #brand {
+    font-size: 0.8rem;
+  }
+  #description {
+    font-size: 0.5rem;
+  }
+  #price {
+    font-size: 1.2rem;
+  }
+
+  #filters li,
+  #filtersType li {
+    font-size: 0.7rem;
+  }
+
+  /* #fav{
+    width: 50%;
+} */
+  .fav .favAdd button,
+  #buy button,
+  .cart .favDel button,
+  #removeCart button {
+    padding: 1%;
+    height: 2rem;
+    width: 4rem;
+    font-size: 0.7rem;
+    margin: 2%;
+  }
+}
+
+/* /* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 992px) {
+  #header h1 {
+    font-size: 3rem;
+  }
+  #header h2 {
+    font-size: 2rem;
+  }
+  #showFilters {
+    font-size: 2rem;
+  }
+  #save {
+    gap: 50%;
+    margin-left: -5%;
+  }
+
+  .product {
+    width: 20%;
+    height: 60%;
+  }
+  #img {
+    height: 35%;
+  }
+  #price {
+    font-size: 1.1rem;
+  }
+  .add button {
+    padding: 2%;
+  }
+  #filters li,
+  #filtersType li {
+    font-size: 0.5rem;
+  }
+  .filterBy {
+    font-size: 0.9rem;
+  }
+  .fav .favAdd button,
+  #buy button,
+  .fav .favDel button,
+  #removeCart button {
+    padding: 1%;
+    height: 1.5rem;
+    width: 3rem;
+    font-size: 0.5rem;
+    margin: 1%;
+  }
+  .favName {
+    font-size: 0.8rem;
+  }
+}
+/* /* Small devices (portrait tablets and large phones, 600px and up) */
+
+@media only screen and (max-width: 768px) {
+  #img2 {
+    height: 6rem;
+  }
+  #header h1 {
+    font-size: 3rem;
+  }
+  #header h2 {
+    font-size: 1.5rem;
+  }
+  #save {
+    flex-direction: column;
+    height: 30%;
+    justify-content: space-around;
+  }
+  .product {
+    width: 30%;
+    height: 55%;
+  }
+  #price {
+    font-size: 1rem;
+  }
+  .add button {
+    padding: 1%;
+    height: 2rem;
+  }
+  #filters li,
+  #filtersType li {
+    font-size: 0.4rem;
+  }
+  .filterBy {
+    font-size: 0.7rem;
+  }
+  .reset {
+    font-size: 0.8rem;
+  }
+  .favName {
+    font-size: 0.6rem;
+  }
+  .favPrice {
+    font-size: 0.5rem;
+  }
+  .fav .favAdd button,
+  #buy button,
+  .cart .favDel button {
+    padding: 0.5%;
+    height: 1.5rem;
+    width: 2.5rem;
+    font-size: 0.4rem;
+    margin: 1%;
+  }
+}
+/* /* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  header {
+    width: 100%;
+  }
+  #img2 {
+    display: none;
+  }
+  #header h1 {
+    font-size: 3rem;
+  }
+  #header h2 {
+    font-size: 1.5rem;
+  }
+  .product {
+    width: 30%;
+    min-height: 40%;
+  }
+  #img {
+    width: 40%;
+    height: 25%;
+  }
+  #title {
+    flex-direction: column;
+  }
+  #name {
+    font-size: 0.8rem;
+  }
+  #brand {
+    font-size: 0.6rem;
+  }
+  #description {
+    font-size: 0.3rem;
+  }
+  #price {
+    font-size: 1rem;
+  }
+  #price {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  .add button {
+    padding: 1%;
+    height: 1.5rem;
+    width: 4rem;
+    font-size: 0.5rem;
+  }
+
+  .sections {
+    flex-direction: column;
+    gap: 5%;
+  }
+  .fav,
+  .cart {
+    flex-direction: column;
+  }
+}

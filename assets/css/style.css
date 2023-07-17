@@ -27,7 +27,7 @@ li {
 
 header {
   background-color: white;
-  width: 90%;
+  width: 100%;
   height: 25vh;
   display: flex;
   justify-content: center;
@@ -36,6 +36,7 @@ header {
   margin-bottom: 1rem;
   position: fixed;
   top: 0;
+  flex-wrap: wrap;
 }
 #header {
   display: flex;
@@ -109,7 +110,7 @@ h2 {
 
 /* ///////////////////////////////////////////////////////FAVOURITE MODAL //////////////////////////////////////////////////////////// */
 #fav {
-  display: none;
+  /* display: none; */
   background-color: #f8b495a2;
   position: fixed;
   overflow-y: auto;
@@ -122,6 +123,12 @@ h2 {
   align-items: center;
   justify-content: space-between;
   padding: 1%;
+  font-size: 0.8rem;
+}
+.favPrice{
+  font-size: 0.9rem;
+  font-weight: bold;
+
 }
 .fav,
 .cart {
@@ -142,22 +149,26 @@ h2 {
 #buy button {
   background-color: #f8b595;
   color: white;
-  padding: 3%;
+  padding: 2%;
   border-radius: 10px;
   height: 2.5rem;
   width: 6rem;
   border: none;
+  font-size: 0.8rem;
+
 }
 
 .fav .favDel button,
 .cart .favDel button {
   background-color: hsl(0, 7%, 13%);
   color: white;
-  padding: 3%;
+  padding: 2%;
   border-radius: 10px;
   height: 2.5rem;
   width: 6rem;
   border: none;
+  font-size: 0.8rem;
+
 }
 .fav .favAdd button:hover,
 #buy button:hover {
@@ -206,9 +217,9 @@ h2 {
 .cartI {
   width: 10%;
 }
-.cartIt {
+/* .cartIt {
   width: 25%;
-}
+} */
 #total {
   color: white;
   margin: 2rem;
@@ -224,22 +235,24 @@ h2 {
 /* ///////////////////////////////////////////////////////PRODUCTS //////////////////////////////////////////////////////////// */
 
 main {
-  width: 100%;
+  width: 100vw;
 }
 #main {
-  width: 100%;
+  width: 90%;
   height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 0 auto;
+  gap:5%;
 }
 .product {
   width: 16%;
-  height: 60%;
+  height: 65%;
   background-color: white;
-  margin: 1rem;
+  /* margin: 1rem; */
   padding: 1%;
   display: flex;
   flex-direction: column;
@@ -387,6 +400,7 @@ main {
   gap: 1rem;
   align-items: flex-start;
   justify-content: flex-start;
+  
 }
 .section li {
   background-color: #f8b595;
