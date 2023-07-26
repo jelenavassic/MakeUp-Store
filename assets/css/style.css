@@ -110,7 +110,7 @@ h2 {
 
 /* ///////////////////////////////////////////////////////FAVOURITE MODAL //////////////////////////////////////////////////////////// */
 #fav {
-  /* display: none; */
+  display: none;
   background-color: #f8b495a2;
   position: fixed;
   overflow-y: auto;

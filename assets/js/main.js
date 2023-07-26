@@ -174,8 +174,8 @@ function showProducts(data) {
         totalPrice = totalPrice + parseFloat(newPrice);
 
         html += `<div class="cart">
-<div class="favPh favv cartIt"><img src="${img}" alt="" /></div>
-<div class="favName favv cartIt">
+<div class="favPh cartIt"><img src="${img}" alt="" /></div>
+<div class="favName cartIt">
   <div class="fav1">${name}</div>
   <div class="fav2"></div>
   ${brand}
@@ -241,8 +241,8 @@ function showProducts(data) {
           .price_sign;
 
         html += `<div class="fav">
-<div class="favPh favv"><img src="${img}" alt="" /></div>
-<div class="favName favv">
+<div class="favPh"><img src="${img}" alt="" /></div>
+<div class="favName">
   <div class="fav1">${name}</div>
   <div class="fav2"></div>
   ${brand}
