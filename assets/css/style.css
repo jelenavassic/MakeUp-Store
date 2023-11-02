@@ -4,15 +4,12 @@
   padding: 0;
 }
 body {
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(to bottom right, #cd9a84f2,#fec0a3);
+  /* background: linear-gradient(to bottom right, #f8b595,#ab806d); */
+
   background-attachment: fixed;
-  background-image: linear-gradient(
-      rgba(227, 96, 96, 0.1),
-      rgba(149, 146, 146, 0.5)
-    ),
-    url("../img/banner.jpg");
-}
+
+ }
 li {
   list-style: none;
 }
@@ -250,16 +247,17 @@ main {
 }
 .product {
   width: 16%;
-  height: 65%;
+  height: 45%;
   background-color: white;
   /* margin: 1rem; */
+  border-radius: 15px;
   padding: 1%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   box-shadow: 1px 1px 2px grey;
-}
+ }
 .product:hover {
   transform: scale(1.05);
 }
@@ -268,8 +266,8 @@ main {
   height: 100%;
 }
 #img {
-  width: 70%;
-  height: 30%;
+  /* width: 60%; */
+  height: 40%;
 }
 .product-item {
   align-self: auto;
@@ -287,7 +285,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 #brand {
@@ -299,7 +297,7 @@ main {
   font-size: 0.7rem;
 }
 #price {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .favv button {
   display: flex;

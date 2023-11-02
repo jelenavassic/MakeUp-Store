@@ -78,9 +78,7 @@ function showProducts(data) {
        </div>
     </div>
     <div class="product-item" id="brand">${element.brand}</div>
-    <div class="product-item" id="description">
-    ${element.description}
-    </div>
+   
     <div class="product-item" id="price">${element.price_sign}` +
       `${element.price}</div>
     <div class="product-item add" data-id="${element.id}"><button>Add to cart</button></div>
@@ -396,9 +394,7 @@ function showProducts(data) {
          </div>
       </div>
       <div class="product-item" id="brand">${element.brand}</div>
-      <div class="product-item" id="description">
-      ${element.description}
-      </div>
+   
       <div class="product-item" id="price">${element.price_sign}` +
         `${element.price}</div>
       <div class="product-item add" data-id="${element.id}"><button>Add to cart</button></div>
