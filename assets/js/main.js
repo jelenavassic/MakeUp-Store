@@ -62,7 +62,6 @@ function showProducts(data) {
   renderCart();
   renderFavourites();
   renderFilters();
-
   //////////////////////////RENDER PRODUCTS
   products.forEach((element) => {
     html +=
@@ -88,8 +87,11 @@ function showProducts(data) {
   </div>`;
   });
   document.getElementById("main").innerHTML = html;
+  attachEventListeners()
 
   ////////////////////////AFTER RENDERING PRODUCTS
+
+  function attachEventListeners() {
   const btnAddToCart = document.querySelectorAll(".add");
   const btnAddToFav = document.querySelectorAll(".favv");
   const brandElements = document.querySelectorAll(".brands");
@@ -111,6 +113,8 @@ function showProducts(data) {
   typeElements.forEach(function (element) {
     element.addEventListener("change", showFilteredProducts);
   });
+
+}
 
   resetBtn.addEventListener("click", reset);
 
@@ -402,6 +406,7 @@ function showProducts(data) {
     });
 
     document.getElementById("main").innerHTML = html;
+    attachEventListeners()
   }
   function reset() {
     allProducts();
