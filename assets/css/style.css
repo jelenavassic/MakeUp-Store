@@ -55,7 +55,7 @@ header {
 :root.light {
   /* --header-backround: white;
   --background-color: #cd9a84f2; */
-  --header-backround: #FCD3D1;
+  --header-backround: white;
   --background-color: #9E6D70;
   --color: hsl(0, 1%, 49%);
    --link-color: inherit;
