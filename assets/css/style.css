@@ -3,13 +3,13 @@
   margin: 0;
   padding: 0;
 }
+
 body {
-  background: linear-gradient(to bottom right, #cd9a84f2,#fec0a3);
-  /* background: linear-gradient(to bottom right, #f8b595,#ab806d); */
 
+  background-color: var(--background-color);
+  color: var(--color);
   background-attachment: fixed;
-
- }
+}
 li {
   list-style: none;
 }
@@ -23,7 +23,8 @@ li {
 /* /////////////////////////////////////////////////////// HEADER //////////////////////////////////////////////////////////// */
 
 header {
-  background-color: white;
+  background-color: var(--header-backround);
+
   width: 100%;
   height: 25vh;
   display: flex;
@@ -48,6 +49,161 @@ header {
   flex-direction: row;
   align-items: center;
 }
+/* toggle */
+
+:root,
+:root.light {
+  --background-color: #cd9a84f2;
+  --color: hsl(0, 1%, 49%);
+
+   --link-color: inherit;
+  --contrast-color: black;
+  --header-backround: white;
+}
+
+/* Respond to user settings. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --header-backround: rgb(118, 103, 103);
+
+    --background-color: #31221cf2;
+     --color: black;
+     --contrast-color: hsl(0, 0%, 80%);
+  }
+}
+
+/* Respond to manual dark setting. */
+:root.dark {
+  --header-backround: rgb(118, 103, 103);
+
+  --background-color: #31221cf2;
+  --color: black;
+  /* --link-color: hsl(219, 100%, 77%); */
+  --contrast-color: hsl(0, 0%, 80%);
+}
+
+/* .toggle-container{
+    width: 2re;
+} */
+
+.toggle {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+  /* margin-bottom: 1em; */
+  cursor: pointer;
+  gap: 1%;
+}
+
+button.toggle {
+  border: 0;
+  padding: 0;
+  background-color: transparent;
+  font: inherit;
+}
+
+.toggle__input {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.toggle__display {
+  --offset: 0.25em;
+  --diameter: 1.8em;
+padding: 10%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-around;
+  box-sizing: content-box;
+  /* width: calc(var(--diameter) * 2 + var(--offset) * 2);
+  height: calc(var(--diameter) + var(--offset) * 2); */
+  border: 0.1em solid rgb(0 0 0 / 0.2);
+  position: relative;
+  border-radius: 100vw;
+  background-color: hsl(0, 0%, 100%);
+  transition: 250ms;
+}
+
+.toggle__display::before {
+  content: "";
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  left:0%;
+  box-sizing: border-box;
+  /* width: var(--diameter);
+  height: var(--diameter); */
+  width:50%;
+  height:100%;
+  border: 0.1em solid rgb(0 0 0 / 0.2);
+  border-radius: 50%;
+  background-color: var(--header-backround);
+  transform: translate(0, -50%);
+  will-change: transform;
+  transition: inherit;
+}
+
+.toggle:focus .toggle__display,
+.toggle__input:focus + .toggle__display {
+  outline: 1px dotted #212121;
+  outline: 1px auto -webkit-focus-ring-color;
+  outline-offset: 2px;
+}
+
+.toggle:focus,
+.toggle:focus:not(:focus-visible) .toggle__display,
+.toggle__input:focus:not(:focus-visible) + .toggle__display {
+  outline: 0;
+}
+
+.toggle[aria-pressed="true"] .toggle__display,
+.toggle__input:checked + .toggle__display {
+  background-color: #12161f;
+  border-color: var(--contrast-color);
+}
+
+.toggle[aria-pressed="true"] .toggle__display::before,
+.toggle__input:checked + .toggle__display::before {
+  transform: translate(100%, -50%);
+}
+
+.toggle[disabled] .toggle__display,
+.toggle__input:disabled + .toggle__display {
+  opacity: 0.6;
+  filter: grayscale(40%);
+  cursor: not-allowed;
+}
+
+[dir="rtl"] .toggle__display::before {
+  left: auto;
+  right: var(--offset);
+}
+
+[dir="rtl"] .toggle[aria-pressed="true"] + .toggle__display::before,
+[dir="rtl"] .toggle__input:checked + .toggle__display::before {
+  transform: translate(-100%, -50%);
+}
+
+.toggle__icon {
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  color: inherit;
+  fill: currentcolor;
+  vertical-align: middle;
+  overflow: hidden;
+}
+
+.toggle__icon--cross {
+  color: hsl(48, 97%, 51%);
+}
+
+.toggle__icon--checkmark {
+  color: hsl(62, 100%, 93%);
+}
 #showFilters {
   margin-bottom: 20%;
   z-index: 9999;
@@ -55,10 +211,10 @@ header {
   cursor: pointer;
   border: none;
   background-color: transparent;
-  color: #f8b595;
+  color: var(--background-color);
 }
 h1 {
-  color: #f8b595;
+  color: var(--background-color);
   font-size: 5rem;
   font-style: italic;
 }
@@ -66,7 +222,7 @@ h1 {
   margin-bottom: 30%;
 }
 h2 {
-  color: black;
+  color: var(--background-color);
   font-size: 3rem;
 }
 #save {
@@ -76,7 +232,7 @@ h2 {
 }
 .fa-solid,
 .fa-regular {
-  color: #f8b595;
+  color: var(--background-color);
 }
 .fa-xl {
   margin-left: 2rem;
@@ -99,7 +255,8 @@ h2 {
   align-items: center;
   width: 1.5rem;
   height: 1.5rem;
-  color: #f8b595;
+  color: var(--background-color);
+
   margin: 20%;
   font-weight: bold;
   border-radius: 100%;
@@ -122,10 +279,9 @@ h2 {
   padding: 1%;
   font-size: 0.8rem;
 }
-.favPrice{
+.favPrice {
   font-size: 0.9rem;
   font-weight: bold;
-
 }
 .fav,
 .cart {
@@ -152,7 +308,6 @@ h2 {
   width: 6rem;
   border: none;
   font-size: 0.8rem;
-
 }
 
 .fav .favDel button,
@@ -165,7 +320,6 @@ h2 {
   width: 6rem;
   border: none;
   font-size: 0.8rem;
-
 }
 .fav .favAdd button:hover,
 #buy button:hover {
@@ -243,7 +397,7 @@ main {
   justify-content: center;
   flex-wrap: wrap;
   margin: 0 auto;
-  gap:5%;
+  gap: 5%;
 }
 .product {
   width: 16%;
@@ -257,7 +411,7 @@ main {
   align-items: center;
   justify-content: space-between;
   box-shadow: 1px 1px 2px grey;
- }
+}
 .product:hover {
   transform: scale(1.05);
 }
@@ -309,7 +463,7 @@ main {
   height: 4rem;
 }
 .add button {
-  background-color: #f8b595;
+  background-color: var(--background-color);
   color: white;
   border: none;
   padding: 3%;
@@ -375,7 +529,7 @@ main {
 }
 .filterBy {
   margin-bottom: 5%;
-  color: #f8b595;
+  color: var(--background-color);
   font-weight: bold;
   font-size: 1.1rem;
 }
@@ -389,6 +543,7 @@ main {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  
 }
 .section {
   height: 90%;
@@ -398,10 +553,10 @@ main {
   gap: 1rem;
   align-items: flex-start;
   justify-content: flex-start;
-  
 }
 .section li {
-  background-color: #f8b595;
+  background-color: var(--background-color);
+  ;
 }
 .section li:hover {
   transform: scale(1.1);
