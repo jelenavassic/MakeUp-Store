@@ -53,19 +53,19 @@ header {
 
 :root,
 :root.light {
-  --background-color: #cd9a84f2;
+  /* --header-backround: white;
+  --background-color: #cd9a84f2; */
+  --header-backround: #FCD3D1;
+  --background-color: #9E6D70;
   --color: hsl(0, 1%, 49%);
-
    --link-color: inherit;
   --contrast-color: black;
-  --header-backround: white;
 }
 
 /* Respond to user settings. */
 @media (prefers-color-scheme: dark) {
   :root {
     --header-backround: rgb(118, 103, 103);
-
     --background-color: #31221cf2;
      --color: black;
      --contrast-color: hsl(0, 0%, 80%);
@@ -74,12 +74,13 @@ header {
 
 /* Respond to manual dark setting. */
 :root.dark {
-  --header-backround: rgb(118, 103, 103);
-
-  --background-color: #31221cf2;
+  /* --header-backround: rgb(118, 103, 103);
+  --background-color: #31221cf2; */
   --color: black;
-  /* --link-color: hsl(219, 100%, 77%); */
   --contrast-color: hsl(0, 0%, 80%);
+
+  --header-backround: #504E63;
+  --background-color: #00142F;
 }
 
 /* .toggle-container{
