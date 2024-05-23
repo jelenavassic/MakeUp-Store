@@ -8,6 +8,8 @@ const resetBtn = document.querySelector(".reset");
 const showFilters = document.getElementById("showFilters");
 const modal = document.getElementById("modal");
 const closeBtn = document.querySelector(".close");
+ const mainImg = document.getElementById("mainImg");
+
 const docElement = document.documentElement;
 const toggle = document.querySelector(".toggle");
 let products = [];
@@ -16,9 +18,12 @@ favouritesBtn.addEventListener("click", showFavourites);
 cartBtn.addEventListener("click", showCart);
 showFilters.addEventListener("click", () => {
   modal.style.display = "block";
+  mainImg.style.display= "none"
 });
 closeBtn.addEventListener("click", () => {
   modal.style.display = "none";
+  mainImg.style.display= "flex"
+
 });
 
 allProducts();

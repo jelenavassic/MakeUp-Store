@@ -1,4 +1,5 @@
 /* /// Large devices (laptops/desktops, 992px and up)//////////////// */
+
 @media only screen and (max-width: 1200px) {
   #header h1 {
     font-size: 4rem;
@@ -12,10 +13,10 @@
 
   .product {
     width: 16%;
-  height: 45%;
+    height: 45%;
   }
   #name {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   #brand {
     font-size: 0.8rem;
@@ -32,9 +33,6 @@
     font-size: 0.7rem;
   }
 
-  /* #fav{
-    width: 50%;
-} */
   .fav .favAdd button,
   #buy button,
   .cart .favDel button,
@@ -63,10 +61,6 @@
     margin-left: -5%;
   }
 
-  .product {
-    width: 16%;
-    height: 45%;
-  }
   #img {
     height: 35%;
   }
@@ -110,7 +104,6 @@
     font-size: 1.5rem;
   }
   #save {
-    flex-direction: column;
     height: 30%;
     justify-content: space-around;
   }
@@ -154,28 +147,37 @@
 /* /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   header {
-    width: 100%;
+    gap: 1%;
+  }
+  #header {
+    gap: 0rem;
   }
   #img2 {
     display: none;
   }
-  
+  .headerLeft {
+    gap: 1rem;
+  }
+
   #header h1 {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   #header h2 {
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
-  #save{
+  #save {
     flex-direction: row;
     gap: 20%;
-    margin-left: -10%;
+  }
+
+  #showFilters {
+    font-size: 1.5rem;
   }
   .product {
     width: 30%;
     height: 30%;
   }
-  .favv{
+  .favv {
     height: 3rem;
   }
   #img {
@@ -213,5 +215,18 @@
   .fav,
   .cart {
     flex-direction: column;
+  }
+
+  #mid {
+    margin: 5rem 0 0 0;
+  }
+  .filterBy {
+    font-weight: normal;
+    font-size: 0.5rem;
+  }
+  .close {
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
   }
 }

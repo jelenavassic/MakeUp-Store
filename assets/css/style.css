@@ -5,7 +5,6 @@
 }
 
 body {
-
   background-color: var(--background-color);
   color: var(--color);
   background-attachment: fixed;
@@ -20,15 +19,18 @@ li {
   align-items: center;
   justify-content: center;
 }
+
 /* /////////////////////////////////////////////////////// HEADER //////////////////////////////////////////////////////////// */
 
 header {
-  background-color: var(--header-backround);
-
+  background-color: white;
+  box-shadow: 1px 1px 2px grey;
+  font-family: "Alegreya", serif;
+  font-weight: 100;
   width: 100%;
-  height: 25vh;
+  height: 12vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 18%;
   margin-bottom: 1rem;
@@ -39,13 +41,15 @@ header {
 #header {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex-direction: row;
+  font-style: italic;
 }
 .headerLeft {
   display: flex;
   justify-content: center;
-  gap: 30%;
+  gap: 3rem;
   flex-direction: row;
   align-items: center;
 }
@@ -53,46 +57,37 @@ header {
 
 :root,
 :root.light {
-  /* --header-backround: white;
-  --background-color: #cd9a84f2; */
   --header-backround: white;
-  --background-color: #9E6D70;
-  --color: hsl(0, 1%, 49%);
-   --link-color: inherit;
+  --background-color: white;
+  --color: #976143;
+  --link-color: inherit;
   --contrast-color: black;
 }
 
 /* Respond to user settings. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --header-backround: rgb(118, 103, 103);
-    --background-color: #31221cf2;
-     --color: black;
-     --contrast-color: hsl(0, 0%, 80%);
+    --header-backround: white;
+    --background-color: black;
+    --color: black;
+    --contrast-color: white;
   }
 }
 
 /* Respond to manual dark setting. */
 :root.dark {
-  /* --header-backround: rgb(118, 103, 103);
-  --background-color: #31221cf2; */
   --color: black;
   --contrast-color: hsl(0, 0%, 80%);
-
-  --header-backround: #504E63;
-  --background-color: #00142F;
+  --header-backround: white;
+  --background-color: black;
 }
-
-/* .toggle-container{
-    width: 2re;
-} */
 
 .toggle {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   position: relative;
-  /* margin-bottom: 1em; */
+  margin-bottom: 1em;
   cursor: pointer;
   gap: 1%;
 }
@@ -114,13 +109,11 @@ button.toggle {
 .toggle__display {
   --offset: 0.25em;
   --diameter: 1.8em;
-padding: 10%;
+  padding: 10%;
   display: inline-flex;
   align-items: center;
   justify-content: space-around;
   box-sizing: content-box;
-  /* width: calc(var(--diameter) * 2 + var(--offset) * 2);
-  height: calc(var(--diameter) + var(--offset) * 2); */
   border: 0.1em solid rgb(0 0 0 / 0.2);
   position: relative;
   border-radius: 100vw;
@@ -133,12 +126,10 @@ padding: 10%;
   z-index: 2;
   position: absolute;
   top: 50%;
-  left:0%;
+  left: 0%;
   box-sizing: border-box;
-  /* width: var(--diameter);
-  height: var(--diameter); */
-  width:50%;
-  height:100%;
+  width: 50%;
+  height: 100%;
   border: 0.1em solid rgb(0 0 0 / 0.2);
   border-radius: 50%;
   background-color: var(--header-backround);
@@ -190,8 +181,8 @@ padding: 10%;
 
 .toggle__icon {
   display: inline-block;
-  width: 1.2em;
-  height: 1.2em;
+  width: 1em;
+  height: 1em;
   color: inherit;
   fill: currentcolor;
   vertical-align: middle;
@@ -208,57 +199,55 @@ padding: 10%;
 #showFilters {
   margin-bottom: 20%;
   z-index: 9999;
-  font-size: 3.5rem;
+  font-size: 2rem;
   cursor: pointer;
   border: none;
   background-color: transparent;
-  color: var(--background-color);
+  color: (--background-color);
 }
 h1 {
-  color: var(--background-color);
-  font-size: 5rem;
+  color: black;
+  font-size: 3rem;
   font-style: italic;
 }
 #img1 {
   margin-bottom: 30%;
 }
 h2 {
-  color: var(--background-color);
-  font-size: 3rem;
+  color: black;
+  font-size: 2rem;
 }
 #save {
+  height: 50%;
   display: flex;
   flex-direction: row;
-  gap: 80%;
+  align-items: center;
+  gap: 3rem;
 }
 .fa-solid,
 .fa-regular {
-  color: var(--background-color);
+  color: black;
 }
 .fa-xl {
-  margin-left: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.8rem;
 }
 .save {
   border: none;
   background-color: transparent;
 }
+
 .fa-solid:hover,
 .fa-regular:hover {
-  color: red;
+  color: #daccc0;
 }
 
 /* ///////////////////////////////////////////////////////NUMBER OF SAVED //////////////////////////////////////////////////////////// */
 #favnum,
 #cartnum {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
-  width: 1.5rem;
-  height: 1.5rem;
-  color: var(--background-color);
-
-  margin: 20%;
+  color: black;
   font-weight: bold;
   border-radius: 100%;
 }
@@ -266,7 +255,7 @@ h2 {
 /* ///////////////////////////////////////////////////////FAVOURITE MODAL //////////////////////////////////////////////////////////// */
 #fav {
   display: none;
-  background-color: #f8b495a2;
+  background-color: #daccc0;
   position: fixed;
   overflow-y: auto;
   max-height: 80vh;
@@ -288,12 +277,12 @@ h2 {
 .cart {
   background-color: white;
   padding: 2%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 4%;
   width: 100%;
 }
+
 .fav img,
 .cart img {
   height: 5rem;
@@ -301,12 +290,12 @@ h2 {
 
 .fav .favAdd button,
 #buy button {
-  background-color: #f8b595;
+  background-color: #daccc0;
   color: white;
   padding: 2%;
   border-radius: 10px;
-  height: 2.5rem;
-  width: 6rem;
+  height: 2rem;
+  width: 5rem;
   border: none;
   font-size: 0.8rem;
 }
@@ -317,14 +306,14 @@ h2 {
   color: white;
   padding: 2%;
   border-radius: 10px;
-  height: 2.5rem;
-  width: 6rem;
+  height: 2rem;
+  width: 5rem;
   border: none;
   font-size: 0.8rem;
 }
 .fav .favAdd button:hover,
 #buy button:hover {
-  background-color: red;
+  background-color: #daccc0;
 }
 .fav .favDel button:hover,
 .cart .favDel button:hover {
@@ -343,7 +332,7 @@ h2 {
   margin: 2%;
 }
 .remove button:hover {
-  background-color: #f8b595;
+  background-color: #daccc0;
 }
 
 /* ///////////////////////////////////////////////////////CART MODAL //////////////////////////////////////////////////////////// */
@@ -369,9 +358,7 @@ h2 {
 .cartI {
   width: 10%;
 }
-/* .cartIt {
-  width: 25%;
-} */
+
 #total {
   color: white;
   margin: 2rem;
@@ -389,7 +376,52 @@ h2 {
 main {
   width: 100vw;
 }
+
+#mainImg {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url(../img/pexels-zhugewala-605070-2113855.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#mainImg a button {
+  border: none;
+  z-index: 2;
+  background-color: white;
+  padding: 0.8rem;
+  margin: 0 auto;
+  font-family: "Alegreya", serif;
+  font-size: 1.5rem;
+  box-shadow: 1px 1px 2px grey;
+  margin-bottom: 4rem;
+  width: 9rem;
+  border-radius: 24px;
+  cursor: pointer;
+  opacity: 0;
+  animation: slideInFromBottom 2s ease-out forwards;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#mainImg a button:hover {
+  background-color: #976143;
+}
+
 #main {
+  color: black;
   width: 90%;
   height: 100vh;
   display: flex;
@@ -399,19 +431,19 @@ main {
   flex-wrap: wrap;
   margin: 0 auto;
   gap: 5%;
+  margin-top: 5%;
 }
 .product {
   width: 16%;
   height: 45%;
   background-color: white;
-  /* margin: 1rem; */
   border-radius: 15px;
   padding: 1%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  border: 1px solid #daccc0;
   justify-content: space-between;
-  box-shadow: 1px 1px 2px grey;
 }
 .product:hover {
   transform: scale(1.05);
@@ -421,8 +453,7 @@ main {
   height: 100%;
 }
 #img {
-  /* width: 60%; */
-  height: 40%;
+  height: 35%;
 }
 .product-item {
   align-self: auto;
@@ -445,14 +476,11 @@ main {
 }
 #brand {
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
-#description {
-  font-style: italic;
-  font-size: 0.7rem;
-}
+
 #price {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 .favv button {
   display: flex;
@@ -464,7 +492,8 @@ main {
   height: 4rem;
 }
 .add button {
-  background-color: var(--background-color);
+  background-color: #daccc0;
+
   color: white;
   border: none;
   padding: 3%;
@@ -473,39 +502,32 @@ main {
   width: 6rem;
 }
 .add button:hover {
-  background-color: red;
+  color: var(--contrast-color);
+  background-color: var(--color);
 }
 
 /* /////////////////////////////////////////////////////// MODAL FILTERS //////////////////////////////////////////////////////////// */
 
 .modal {
   display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
+
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0, 0.209);
 }
-.modal-content {
-  display: flex;
-  justify-content: flex-start;
-}
+
 #close {
+  color: var(--contrast-color);
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   padding: 2%;
-  margin-bottom: 10%;
 }
 .reset {
-  color: white;
-  background-color: #ab806d;
-  padding: 2.5%;
-  border-radius: 5px;
+  color: var(--contrast-color);
+  text-decoration: underline;
 }
 .close {
   font-size: 2rem;
@@ -513,52 +535,41 @@ main {
   cursor: pointer;
 }
 #middle {
-  background: none;
   width: 90%;
-  height: 33vh;
+  height: 100%;
   padding: 1%;
 }
 #mid {
-  background-color: white;
-  width: 20%;
-  height: 100vh;
+  width: 100%;
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  margin: 0 5%;
+  margin: 2rem 0;
 }
 .filterBy {
-  margin-bottom: 5%;
-  color: var(--background-color);
+  color: var(--contrast-color);
   font-weight: bold;
-  font-size: 1.1rem;
 }
 .bold {
-  font-size: 1.2rem;
   align-self: center;
-  margin-bottom: 10%;
 }
 .sections {
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
-  
 }
 .section {
-  height: 90%;
   padding: 2%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 1rem;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: space-between;
 }
-.section li {
-  background-color: var(--background-color);
-  ;
-}
+
 .section li:hover {
   transform: scale(1.1);
 }
@@ -572,17 +583,18 @@ main {
   border-radius: 3px;
 }
 #filters li {
-  padding: 5%;
+  text-decoration: underline;
   text-align: center;
   text-transform: uppercase;
-  color: white;
+  color: var(--contrast-color);
+        
   font-weight: bold;
   border-radius: 5px;
 }
 #filtersType li {
-  padding: 5%;
+  text-decoration: underline;
+  color: var(--contrast-color);
   text-align: center;
-  color: white;
   border-radius: 5px;
 }
 .brands + label {
