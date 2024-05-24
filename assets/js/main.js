@@ -81,7 +81,7 @@ function showProducts(data) {
     </div>
     <div id="title">
       <div class="product-item" id="name">${element.name}</div>
-      <div class="favv" title="Add to Favorites" data-id="${element.id}" ><button><i class="fa-regular fa-heart fa-2xl"></i></button>
+      <div class="favv" title="Add to Favorites" data-id="${element.id}" ><button><i class="fa-regular fa-heart fa-xl"></i></button>
        </div>
     </div>
     <div class="product-item" id="brand">${element.brand}</div>
@@ -215,7 +215,8 @@ function showProducts(data) {
   }
 
   function addToFav() {
-    this.innerHTML = `<i class="fa-solid fa-heart fa-xl" title="Added"></i>`;
+    
+    this.innerHTML = `<div class="favv"  title="Added"  ><button><i class="fa-solid fa-heart fa-xl"></i></button>`;
 
     let id = this.dataset.id;
     let item = {

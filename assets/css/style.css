@@ -261,8 +261,8 @@ h2 {
   max-height: 80vh;
   z-index: 100;
   width: 40%;
-  right: 19.5%;
-  top: 15%;
+  right: 11%;
+  top: 12%;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
@@ -273,6 +273,7 @@ h2 {
   font-size: 0.9rem;
   font-weight: bold;
 }
+
 .fav,
 .cart {
   background-color: white;
@@ -285,7 +286,8 @@ h2 {
 
 .fav img,
 .cart img {
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
 }
 
 .fav .favAdd button,
@@ -307,7 +309,7 @@ h2 {
   padding: 2%;
   border-radius: 10px;
   height: 2rem;
-  width: 5rem;
+  width: 4rem;
   border: none;
   font-size: 0.8rem;
 }
@@ -344,8 +346,8 @@ h2 {
   max-height: 80vh;
   z-index: 100;
   width: 40%;
-  right: 14.5%;
-  top: 15%;
+  right: 5%;
+  top: 12%;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -362,7 +364,7 @@ h2 {
 #total {
   color: white;
   margin: 2rem;
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -449,7 +451,7 @@ main {
   transform: scale(1.05);
 }
 .product img {
-  width: 100%;
+  /* width: 100%; */
   height: 100%;
 }
 #img {
@@ -482,6 +484,8 @@ main {
 #price {
   font-size: 1.1rem;
 }
+/* .favv{
+  font-size: 2em;} */
 .favv button {
   display: flex;
   align-items: center;
@@ -490,7 +494,9 @@ main {
   background-color: transparent;
   width: 4rem;
   height: 4rem;
-}
+  font-size: 1rem;
+
+ }
 .add button {
   background-color: #daccc0;
 
