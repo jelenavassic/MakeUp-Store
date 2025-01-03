@@ -394,7 +394,6 @@ main {
 #mainImg a button {
   border: none;
   background-color: transparent;
-  /* padding: 0.8rem; */
   margin: 0 auto;
   font-family: "Alegreya", serif;
   animation: slideInFromBottom 2s ease-out forwards, bounceSlow 3s ease-out infinite;
