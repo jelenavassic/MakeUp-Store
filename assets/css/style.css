@@ -82,7 +82,6 @@ header {
   --background-color: black;
 }
 
-
 .toggle {
   display: flex;
   flex-wrap: wrap;
@@ -387,27 +386,46 @@ main {
   background-repeat: no-repeat;
   background-image: url(../img/pexels-zhugewala-605070-2113855.jpg);
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
+  padding: 10%;
 }
 
 #mainImg a button {
   border: none;
-  z-index: 2;
-  background-color: white;
-  padding: 0.8rem;
+  background-color: transparent;
+  /* padding: 0.8rem; */
   margin: 0 auto;
   font-family: "Alegreya", serif;
-  font-size: 1.5rem;
-  box-shadow: 1px 1px 2px grey;
-  margin-bottom: 4rem;
-  width: 9rem;
-  border-radius: 24px;
-  cursor: pointer;
-  opacity: 0;
-  animation: slideInFromBottom 2s ease-out forwards;
+  animation: slideInFromBottom 2s ease-out forwards, bounceSlow 3s ease-out infinite;
+  animation-delay: 0s, 2s; 
 }
 
+
+ 
+@keyframes bounceSlow {
+  0% {
+    transform: translateY(0);
+  }
+  20% {
+    transform: translateY(-60%);  
+  }
+  40% {
+    transform: translateY(0);
+  }
+  60% {
+    transform: translateY(-50%);  
+  }
+  80% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+#mainImg a button:hover {
+  background-color: transparent;
+}
 @keyframes slideInFromBottom {
   0% {
     transform: translateY(100vh);
@@ -419,9 +437,9 @@ main {
   }
 }
 
-#mainImg a button:hover {
+/* #mainImg a button:hover {
   background-color: #976143;
-}
+} */
 
 #main {
   color: black;
@@ -496,8 +514,7 @@ main {
   width: 4rem;
   height: 4rem;
   font-size: 1rem;
-
- }
+}
 .add button {
   background-color: #daccc0;
 
@@ -594,7 +611,7 @@ main {
   text-align: center;
   text-transform: uppercase;
   color: var(--contrast-color);
-        
+
   font-weight: bold;
   border-radius: 5px;
 }
